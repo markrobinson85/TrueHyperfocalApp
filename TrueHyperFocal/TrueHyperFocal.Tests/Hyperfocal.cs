@@ -29,6 +29,7 @@ namespace TrueHyperFocal.Tests
             focalLength = (decimal)50;
             distance = (decimal)304.8;
             fStop = (decimal)11.2;
+            // Result should equal 49.20.
 
             var calc = new HyperfocalCalculator();
 
