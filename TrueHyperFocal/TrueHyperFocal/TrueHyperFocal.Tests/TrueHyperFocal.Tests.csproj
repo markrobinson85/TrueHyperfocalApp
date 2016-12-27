@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TrueHyperFocal\TrueHyperFocal\TrueHyperFocal.csproj">
+    <ProjectReference Include="..\TrueHyperFocal\TrueHyperFocal.csproj">
       <Project>{B9194969-113C-4383-94DB-F122CFE89115}</Project>
       <Name>TrueHyperFocal</Name>
     </ProjectReference>

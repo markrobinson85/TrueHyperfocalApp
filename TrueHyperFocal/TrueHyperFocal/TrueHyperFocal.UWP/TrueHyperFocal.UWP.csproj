@@ -129,7 +129,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TrueHyperFocal\TrueHyperFocal\TrueHyperFocal.csproj">
+    <ProjectReference Include="..\TrueHyperFocal\TrueHyperFocal.csproj">
       <Project>{b9194969-113c-4383-94db-f122cfe89115}</Project>
       <Name>TrueHyperFocal</Name>
     </ProjectReference>
