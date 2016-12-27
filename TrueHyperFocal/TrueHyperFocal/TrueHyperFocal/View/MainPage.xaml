@@ -10,15 +10,15 @@
                 <Label>
                     Distance to Subject
                 </Label>
-                <Entry Text="{Binding Distance}" />
+                <Entry Text="{Binding Distance}" Keyboard="Numeric" />
                 <Label>
                     Focal Length
                 </Label>
-                <Entry Text="{Binding FocalLength}" Placeholder="0"/>
+                <Entry Text="{Binding FocalLength}" Keyboard="Numeric"/>
                 <Label>
                     F/Stop
                 </Label>
-                <Entry Text="{Binding FStop}"/>
+                <Entry Text="{Binding FStop}" Keyboard="Numeric"/>
                 <Label HorizontalTextAlignment="Center"
                        FontAttributes="Bold"
                        FontSize="Large"

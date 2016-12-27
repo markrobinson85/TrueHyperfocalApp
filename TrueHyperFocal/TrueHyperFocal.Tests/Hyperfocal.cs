@@ -37,5 +37,36 @@ namespace TrueHyperFocal.Tests
 
             Assert.AreEqual(result, (decimal)49.20);
         }
+
+        [TestMethod]
+        public void Hyperfocal_EmptyStrings_TestMethod()
+        {
+            string focalLengthString = "";
+            string distanceString = "";
+            string fStopString = "";
+
+            var calc = new HyperfocalCalculator();
+
+            var result = calc.CalculateFromStrings(focalLengthString, distanceString, fStopString);
+
+            Assert.AreEqual(result.GetType(), typeof(decimal));
+            Assert.AreEqual(result, 0);
+
+        }
+
+        [TestMethod]
+        public void Hyperfocal_CalculateFromStrings_TestMethod()
+        {
+            string focalLengthString = "50";
+            string distanceString = "304.8";
+            string fStopString = "11.2";
+
+            var calc = new HyperfocalCalculator();
+
+            var result = calc.CalculateFromStrings(focalLengthString, distanceString, fStopString);
+
+            Assert.AreEqual(result.GetType(), typeof(decimal));
+            Assert.AreEqual(result, (decimal)49.20);
+        }
     }
 }

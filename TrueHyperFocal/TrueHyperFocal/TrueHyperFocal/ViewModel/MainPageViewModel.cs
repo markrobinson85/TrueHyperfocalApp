@@ -40,8 +40,8 @@ namespace TrueHyperFocal.ViewModel
             changed.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        decimal distance;
-        public decimal Distance
+        string distance;
+        public string Distance
         {
             get { return distance; }
             set
@@ -51,9 +51,9 @@ namespace TrueHyperFocal.ViewModel
             }
         }
 
-        decimal focalLength;
+        string focalLength;
         
-        public decimal FocalLength
+        public string FocalLength
         {
             get { return focalLength; }
             set
@@ -63,8 +63,8 @@ namespace TrueHyperFocal.ViewModel
             }
         }
 
-        decimal fStop;
-        public decimal FStop
+        string fStop;
+        public string FStop
         {
             get { return fStop; }
             set
@@ -97,7 +97,7 @@ namespace TrueHyperFocal.ViewModel
             if (IsBusy)
                 return;
 
-            TrueDistance = calc.Calculate(FocalLength, Distance, FStop);
+            TrueDistance = calc.CalculateFromStrings(FocalLength, Distance, FStop);
 
         }
     }
