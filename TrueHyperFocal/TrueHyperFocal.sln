@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueHyperFocal.WinPhone", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueHyperFocal.Windows", "TrueHyperFocal\TrueHyperFocal.Windows\TrueHyperFocal.Windows.csproj", "{FF7A2645-778A-4F00-969C-3DE1547615D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueHyperFocal.Tests", "TrueHyperFocal.Tests\TrueHyperFocal.Tests.csproj", "{0B2AA842-3B82-4365-B39B-6FA390980DA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueHyperFocal.Tests", "TrueHyperFocal\TrueHyperFocal.Tests\TrueHyperFocal.Tests.csproj", "{0B2AA842-3B82-4365-B39B-6FA390980DA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueHyperFocal.UWP", "TrueHyperFocal.UWP\TrueHyperFocal.UWP.csproj", "{BB22C83D-8C37-4BAD-B583-CA97FA34B0FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueHyperFocal.UWP", "TrueHyperFocal\TrueHyperFocal.UWP\TrueHyperFocal.UWP.csproj", "{BB22C83D-8C37-4BAD-B583-CA97FA34B0FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
