@@ -97,7 +97,7 @@ namespace TrueHyperFocal.ViewModel
             if (IsBusy)
                 return;
 
-            TrueDistance = calc.CalculateFromStrings(FocalLength, Distance, FStop);
+            TrueDistance = calc.Calculate(FocalLength, Distance, FStop);
 
         }
     }

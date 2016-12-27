@@ -18,7 +18,7 @@ namespace TrueHyperFocal
             return Math.Round(result, 2);
         }
 
-        public decimal CalculateFromStrings(string focalLengthString, string distanceString, string fStopString)
+        public decimal Calculate(string focalLengthString, string distanceString, string fStopString)
         {
             decimal focalLength;
             decimal distance;
@@ -37,7 +37,7 @@ namespace TrueHyperFocal
             if (focalLength == 0)
                 return 0;
 
-            decimal result = 1 / (((1 / focalLength) - (1 / (focalLength + ((fStop * fStop) / 750)))) * distance);
+            decimal result = Calculate(focalLength, distance, fStop);
 
             return Math.Round(result, 2);
 

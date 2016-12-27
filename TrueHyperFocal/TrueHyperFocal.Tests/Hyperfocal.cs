@@ -47,7 +47,7 @@ namespace TrueHyperFocal.Tests
 
             var calc = new HyperfocalCalculator();
 
-            var result = calc.CalculateFromStrings(focalLengthString, distanceString, fStopString);
+            var result = calc.Calculate(focalLengthString, distanceString, fStopString);
 
             Assert.AreEqual(result.GetType(), typeof(decimal));
             Assert.AreEqual(result, 0);
@@ -63,7 +63,7 @@ namespace TrueHyperFocal.Tests
 
             var calc = new HyperfocalCalculator();
 
-            var result = calc.CalculateFromStrings(focalLengthString, distanceString, fStopString);
+            var result = calc.Calculate(focalLengthString, distanceString, fStopString);
 
             Assert.AreEqual(result.GetType(), typeof(decimal));
             Assert.AreEqual(result, (decimal)49.20);
