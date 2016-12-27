@@ -1,6 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TrueHyperFocal.View.MainPage">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="TrueHyperFocal.View.MainPage"
+             Title="True Hyperfocal Distance">
+    <StackLayout>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label>
+                    Distance to Subject
+                </Label>
+                <Entry Text="{Binding Distance}" />
+                <Label>
+                    Focal Length
+                </Label>
+                <Entry Text="{Binding FocalLength}" Placeholder="0"/>
+                <Label>
+                    F/Stop
+                </Label>
+                <Entry Text="{Binding FStop}"/>
+                <Label HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       Text="{Binding TrueDistance}"/>
+                <Label HorizontalTextAlignment="Center"
+                       FontSize="Small"
+                       Text="Feet"/>
+                <Button Command="{Binding CalculateCommand}"
+                        Text="Calculate"/>
+                <Button Command="{Binding CalculateExampleCommand}"
+                        Text="Example"/>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    
 </ContentPage>

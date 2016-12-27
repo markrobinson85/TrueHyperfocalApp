@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TrueHyperFocal.ViewModel;
 using Xamarin.Forms;
 
 namespace TrueHyperFocal.View
@@ -13,6 +13,7 @@ namespace TrueHyperFocal.View
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainPageViewModel();
         }
     }
 }

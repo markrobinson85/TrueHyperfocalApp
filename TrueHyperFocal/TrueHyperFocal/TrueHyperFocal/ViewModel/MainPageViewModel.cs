@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace TrueHyperFocal.ViewModel
 {
@@ -20,7 +22,7 @@ namespace TrueHyperFocal.ViewModel
 
             }
         }
-
+        private HyperfocalCalculator calc = new HyperfocalCalculator();
         public MainPageViewModel()
         {
 
@@ -36,6 +38,67 @@ namespace TrueHyperFocal.ViewModel
                 return;
 
             changed.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        decimal distance;
+        public decimal Distance
+        {
+            get { return distance; }
+            set
+            {
+                distance = value;
+                OnPropertyChanged();
+            }
+        }
+
+        decimal focalLength;
+        
+        public decimal FocalLength
+        {
+            get { return focalLength; }
+            set
+            {
+                focalLength = value;
+                OnPropertyChanged();
+            }
+        }
+
+        decimal fStop;
+        public decimal FStop
+        {
+            get { return fStop; }
+            set
+            {
+                fStop = value;
+                OnPropertyChanged();
+            }
+        }
+
+        decimal trueDistance;
+        public decimal TrueDistance
+        {
+            get { return trueDistance; }
+            set
+            {
+                trueDistance = value;
+                OnPropertyChanged();
+            }
+        }
+
+        ICommand calculateCommand;
+
+        public ICommand CalculateCommand =>
+            calculateCommand ??
+            (calculateCommand = new Command(() => Calculate()));
+
+        private void Calculate()
+        {
+            // Not really necessary for this simple of an 
+            if (IsBusy)
+                return;
+
+            TrueDistance = calc.Calculate(FocalLength, Distance, FStop);
+
         }
     }
 }

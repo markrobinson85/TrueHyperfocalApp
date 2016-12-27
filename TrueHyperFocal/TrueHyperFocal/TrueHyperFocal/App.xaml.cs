@@ -15,7 +15,7 @@ namespace TrueHyperFocal
             InitializeComponent();
 
             //MainPage = new TrueHyperFocal.MainPage();
-            var content = new MainPage();
+            var content = new View.MainPage();
 
             MainPage = new NavigationPage(content);
         }
